@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.Mundo</title>
+    <link rel="stylesheet" href="css/styles.css" hreflang="text/css"/>
+    <link rel="stylesheet" href="css/register.css" hreflang="text/css"/>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/database.js"></script>
+</head>
+<body>
+    <div class="header-fijo">
+        <button onclick="debug()" hidden>test</button>
+        <header>
+            <img src="imgs/logo.png" width="30" height="40" class="logo">
+            <p>Dr. Mundo</p>
+            <div class="contenedorLogin">
+                <div id="loginButtons">
+                    <button onclick="showRegister()" class="btnRegister">Registro</button>
+                    <button onclick="showLogin()" class="btnLogin">Inicia Sesion</button>
+                </div>
+
+                <div id="registerDiv" class="registerLoginOculto">
+                    <br>
+                    <div>
+                        <label for="inputUsuarioReg">Usuario:</label>
+                    </div>
+                    <div>
+                        <input type="text" id="inputUsuarioReg" name="inputUsuarioReg" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="inputPasswdReg">Contraseña:</label>
+                    </div>
+                    <div>
+                        <input type="password" id="inputPasswdReg" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="inputPasswdRepeatReg">Repetir Contraseña:</label>
+                    </div>
+                    <div>
+                        <input type="password" id="inputPasswdRepeatReg" />
+                    </div>
+                    <br>
+                    <div>
+                        <button onclick="enviar('reg')">Enviar</button>
+                    </div>
+                </div>
+
+                <div id="loginDiv" class="registerLoginOculto">
+                    <br>
+                    <div>
+                        <label for="inputUsuarioLog">Usuario:</label>
+                    </div>
+                    <div>
+                        <input type="text" id="inputUsuarioLog" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="inputPasswdLog">Contraseña:</label>
+                    </div>
+                    <div>
+                        <input type="password" id="inputPasswdLog" />
+                    </div>
+                    <br>
+                    <div>
+                        <button onclick="enviar('log')">Enviar</button>
+                    </div>
+                </div>
+
+                <div>
+                    <span id="login-span"></span>
+                </div>
+
+                <div>
+                    <span id="logged-user" hidden>Usuario: </span>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <button onclick="desplegarNav()" id="boton-desplegar" class="boton-lista"></button>
+            <ul id="navBar" class="oculto">
+                <li><a href="#" id="inicio">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">NAV ELEMENT 4</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <aside>
+        <div>
+            <p>div aside 1</p>
+        </div>
+        
+        <div>
+            <p>div aside 2</p>
+        </div>
+
+        <div>
+            <p>div aside 3</p>
+        </div>
+    </aside>
+
+    <section>
+        <article>
+            <p>articulo 1</p>
+        </article>
+        <article>
+            <p>articulo 2</p>
+        </article>
+        <article>
+            <p>articulo 3</p>
+        </article>
+
+        <article>
+            <p>articulo 1</p>
+        </article>
+        <article>
+            <p>articulo 2</p>
+        </article>
+        <article>
+            <p>articulo 3</p>
+        </article>
+
+        <article>
+            <p>articulo 1</p>
+        </article>
+        <article>
+            <p>articulo 2</p>
+        </article>
+        <article>
+            <p>articulo 3</p>
+        </article>
+
+        <article>
+            <p>articulo 1</p>
+        </article>
+        <article>
+            <p>articulo 2</p>
+        </article>
+        <article>
+            <p>articulo 3</p>
+        </article>
+
+        <article>
+            <p>articulo 1</p>
+        </article>
+        <article>
+            <p>articulo 2</p>
+        </article>
+        <article>
+            <p>articulo 3</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright &copy 2022 - Dr. Mundo</p>
+    </footer>
+</body>
+</html>

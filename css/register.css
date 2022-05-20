@@ -1,0 +1,33 @@
+.registerLoginOculto {
+    display: none;
+}
+
+.registerDesplegado {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background-color: gray;
+}
+
+.btnRegister {
+    padding: 0;
+}
+
+.btnLogin {
+    padding: 0;
+}
+
+.contenedorLogin {
+    align-self: center;
+}
+
+.loginButtonsOculto {
+    display: none;
+}
+
+#logged-user {
+    color: green;
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+}

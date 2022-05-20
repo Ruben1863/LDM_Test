@@ -1,0 +1,148 @@
+* { 
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    position: fixed;        
+    background: #333; /* Fix me */
+    padding: 10px 0;
+    color: #fff;
+    bottom: 0;
+}
+
+.header-fijo {
+    width: 100%;
+    text-align: center;
+    position: fixed;        
+    background: #333; /* Fix me */
+    color: #fff;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.logo {
+    margin-left: 10px;
+    align-self: center;
+}
+
+.boton-lista {
+    align-self: flex-start;
+    left: 10px;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    background: url(../imgs/lista.png) no-repeat;
+    background-position: center;
+    border: none;
+    background-size: 70%;
+    width: 30px;
+    height: 30px;
+    order: 0;
+    padding: 0%;
+}
+
+.boton-cerrar {
+    align-self: flex-start;
+    color: inherit;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    background: url(../imgs/x.png) no-repeat;
+    background-position: center;
+    border: none;
+    background-size: 70%;
+    width: 30px;
+    height: 30px;
+    order: 0;
+    padding: 0%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 0px 10px 0px 10px;
+    border-bottom: 1px solid #CCC;
+    background-color: #333;
+}
+
+nav li a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 16px;
+    color: white;
+}
+
+nav li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#inicio {
+    background-color: #04AA6D;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.oculto {
+    display: none;
+}
+
+.desplegado li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+    border-bottom: 1px solid #CCC;
+}
+
+header, nav {
+    top: 0;
+}
+
+.correcto {
+    color:green;
+}
+
+.incorrecto {
+    color: red;
+}
+
+section {
+    margin-top: 90px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    margin-bottom: 20px;
+}
+
+article {
+    text-align: center;
+    color: aquamarine;
+}
+
+aside {
+    text-align: center;
+    display: none;
+}
