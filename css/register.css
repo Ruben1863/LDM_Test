@@ -10,11 +10,11 @@
 }
 
 .btnRegister {
-    padding: 0;
+    padding: 5px;
 }
 
 .btnLogin {
-    padding: 0;
+    padding: 5px;
 }
 
 .contenedorLogin {
@@ -27,8 +27,7 @@
 }
 
 #logged-user {
-    color: green;
-    background-color: white;
-    padding: 10px;
+    color: #04AA6D;
     font-weight: bold;
+    margin: 16px 0px 16px 0px;
 }
