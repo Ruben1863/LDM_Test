@@ -3,8 +3,7 @@ Simple users 'database' with all register and login funcs (if page is refreshed 
 */
 
 var users = [{
-    user: "admin",
-    password: "admin"
+
 }]
 
 var loginIsShown = false
@@ -172,6 +171,7 @@ function resetSpan() {
 function loginCompleted(username) {
     var loginButtons = document.getElementById('loginButtons')
     var spanLoggedUser = document.getElementById('logged-user')
+    loginButtons.classList.remove('loginButtonsDesplegado')
     loginButtons.classList.add('loginButtonsOculto')
     spanLoggedUser.textContent = spanLoggedUser.textContent.concat(username)
     spanLoggedUser.removeAttribute('hidden')

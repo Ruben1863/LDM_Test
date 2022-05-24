@@ -88,6 +88,16 @@ nav {
     background-color: #333;
 }
 
+#registerDiv {
+    margin-top: 10px;
+    padding: 0 5px 10px 5px;
+}
+
+#loginDiv {
+    margin-top: 10px;
+    padding: 0 5px 10px 5px;
+}
+
 nav li a {
     text-decoration: none;
     font-weight: bold;
@@ -132,14 +142,14 @@ header, nav {
     color: red;
 }
 
-#loginButtons {
+.loginButtonsDesplegados {
     display: grid;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
 }
 
 section {
-    margin-top: 90px;
+    margin-top: 80px;
     display: grid;
     grid-template-rows: auto auto auto;
     margin-bottom: 20px;
