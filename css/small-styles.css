@@ -133,8 +133,9 @@ header, nav {
 }
 
 #loginButtons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
 }
 
 section {
