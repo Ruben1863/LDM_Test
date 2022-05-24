@@ -2,9 +2,7 @@
 Simple users 'database' with all register and login funcs (if page is refreshed users registered will be deleted)
 */
 
-var users = [{
-
-}]
+var users = []
 
 var loginIsShown = false
 var registerIsShown = false
