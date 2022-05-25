@@ -152,7 +152,7 @@ header, nav {
 }
 
 section {
-    margin-top: 80px;
+    margin-top: 110px;
     display: grid;
     grid-template-rows: auto auto auto;
     margin-bottom: 20px;
