@@ -154,10 +154,9 @@ header, nav {
 
 section {
     display: grid;
-    grid-template-columns: 1fr; /* Just two columns for small devices */
-    margin-bottom: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
-    margin: 150px 20px 90px 20px; /* bottom 70px */
+    margin: 150px 20px 70px 20px;
 }
 
 article {
@@ -248,6 +247,10 @@ article:hover {
     right: 235px; /* Calculated */
     top: 39%;
     transition: all 0.2s linear;
+}
+
+img{
+    width: 100%;
 }
 
 .diva {
