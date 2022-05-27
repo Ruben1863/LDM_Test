@@ -272,3 +272,8 @@ article:hover {
     text-decoration: none;
     color: #04AA6D;
 }
+
+aside div a {
+    text-decoration: none;
+    color: blueviolet;
+}
