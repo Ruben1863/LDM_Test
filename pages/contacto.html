@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elche | La mejor ciudad - Contacto</title>
+    <link rel="stylesheet" href="../css/contacto.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/styles.css" media="(min-width: 1080px)" type="text/css"/>
+    <link rel="stylesheet" href="../css/small-styles.css" media="(max-width: 1080px)" type="text/css"/>
+    <link rel="stylesheet" href="../css/register.css" type="text/css"/>
+    <script src="../js/main.js"></script>
+    <script src="../js/database.js"></script>
+</head>
+<body>
+    <div class="header-fijo">
+        <header>
+            <div>
+                <img src="../imgs/logo.svg" width="75" height="50" alt="logo" class="logo">
+            </div>
+            <div><p class="titulo">Elche</p></div>
+            <div>
+                <div class="contenedorLogin">
+                    <div id="loginButtons" class="loginButtonsDesplegados">
+                        <button onclick="showRegister()" class="btnRegister">Registro</button>
+                        <button onclick="showLogin()" class="btnLogin">Login</button>
+                    </div>
+
+                    <div id="registerDiv" class="registerLoginOculto">
+                        <br>
+                        <div>
+                            <label for="inputUsuarioReg">Usuario:</label>
+                        </div>
+                        <div>
+                            <input type="text" id="inputUsuarioReg" name="inputUsuarioReg" />
+                        </div>
+                        <br>
+                        <div>
+                            <label for="inputPasswdReg">Contraseña:</label>
+                        </div>
+                        <div>
+                            <input type="password" id="inputPasswdReg" />
+                        </div>
+                        <br>
+                        <div>
+                            <label for="inputPasswdRepeatReg">Repetir Contraseña:</label>
+                        </div>
+                        <div>
+                            <input type="password" id="inputPasswdRepeatReg" />
+                        </div>
+                        <br>
+                        <div>
+                            <button onclick="enviar('reg')">Enviar</button>
+                        </div>
+                    </div>
+
+                    <div id="loginDiv" class="registerLoginOculto">
+                        <br>
+                        <div>
+                            <label for="inputUsuarioLog">Usuario:</label>
+                        </div>
+                        <div>
+                            <input type="text" id="inputUsuarioLog" />
+                        </div>
+                        <br>
+                        <div>
+                            <label for="inputPasswdLog">Contraseña:</label>
+                        </div>
+                        <div>
+                            <input type="password" id="inputPasswdLog" />
+                        </div>
+                        <br>
+                        <div>
+                            <button onclick="enviar('log')">Enviar</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span id="login-span"></span>
+                    </div>
+
+                    <div>
+                        <span id="logged-user" hidden>Usuario: </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <button onclick="desplegarNav()" id="boton-desplegar" class="boton-lista"></button>
+            <ul id="navBar" class="oculto">
+                <li><a href="../index.html" id="inicio">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </div>
+<br><br><br><br><br><br><br><br>
+    <div class="form-div">
+        <form>
+          <fieldset>
+            <table class="tabla-contacto">
+              <tr>
+                <td>
+                  <label>Nombre: </label>
+                  <input type="text" />
+                </td>
+                <td>
+                  <label>Apellidos: </label>
+                  <input type="text" />
+                </td>
+              </tr>
+  
+              <tr>
+                <td colspan="2">
+                  <label>Email: </label>
+                  <input type="email" />
+                </td>
+              </tr>
+  
+              <tr>
+                <td>
+                  <label>Sexo: </label>
+                </td>
+                <td>
+                  <input type="radio" id="hombre" name="sexo" value="hombre" />
+                  <label for="hombre">Hombre: </label>
+                  <input type="radio" id="mujer" name="sexo" value="mujer" />
+                  <label for="mujer">Mujer:</label>
+                </td>
+              </tr>
+  
+              <tr>
+                <td>
+                  <label>Motivo de contacto: </label>
+                </td>
+                <td>
+                  <div>
+                    <label>Componentes </label>
+                    <input type="checkbox" name="Aficiones" value="Deporte" />
+                  </div>
+                  <div>
+                    <label>Ordenadores portatiles </label>
+                    <input type="checkbox" name="Aficiones" value="Lectura" />
+                  </div>
+                  <div>
+                    <label>Otros </label>
+                    <input type="checkbox" name="Aficiones" value="Cine" />
+                  </div>
+                </td>
+              </tr>
+  
+              <tr>
+                <td>
+                  <label>Pais: </label>
+                </td>
+                <td>
+                  <select name="Pais:" class="select-pais">
+                    <option selected value="España">España</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Mozambique">Mozambique</option>
+                  </select>
+                </td>
+              </tr>
+  
+              <tr>
+                <td>
+                  <label>Subir una foto descriptiva: </label>
+                </td>
+                <td>
+                  <input type="file" />
+                </td>
+              </tr>
+  
+              <tr>
+                <td>
+                  <label>Descripcion sobre el motivo de contacto:</label>
+                </td>
+                <td>
+                  <textarea name="descripcion" cols="40" rows="5"
+                    placeholder="Escriba aqui sobre el motivo de contacto"></textarea>
+                </td>
+              </tr>
+  
+              <tr>
+                <td>
+                  <input type="reset" value="Resetear" name="Resetear" class="boton-terciario" />
+                </td>
+                <td>
+                  <button type="submit" value="Enviar" class="boton-primario"
+                    onclick="alert('Formulario enviado correctamente! Espere nuestro mensaje');">Enviar</button>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+        </form>
+      </div>
+
+    <footer>
+        <p>Copyright &#169; 2022 - Elche la mejor ciudad</p>
+    </footer>
+</body>
+</html>

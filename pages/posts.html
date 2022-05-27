@@ -1,0 +1,108 @@
+<!-- Todo: Carrusel -->
+<!-- document.getElementById('id1').style.color = 'red' para cambiar stilos sin cambiar clases -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elche | La mejor ciudad</title>
+    <link rel="stylesheet" href="../css/styles.css" media="(min-width: 1080px)" type="text/css"/>
+    <link rel="stylesheet" href="../css/small-styles.css" media="(max-width: 1080px)" type="text/css"/>
+    <link rel="stylesheet" href="../css/register.css" type="text/css"/>
+    <link rel="import" href="../index.html"/>
+    <script src="../js/main.js"></script>
+    <script src="../js/database.js"></script>
+    <script src="../js/import-posts.js"></script>
+</head>
+<body>
+    <div class="header-fijo">
+        <header>
+            <div>
+                <img src="../imgs/logo.svg" width="75" height="50" alt="logo" class="logo">
+            </div>
+            <div><p class="titulo">Elche</p></div>
+            <div>
+                <div class="contenedorLogin">
+                    <div id="loginButtons" class="loginButtonsDesplegados">
+                        <button onclick="showRegister()" class="btnRegister">Registro</button>
+                        <button onclick="showLogin()" class="btnLogin">Login</button>
+                    </div>
+
+                    <div id="registerDiv" class="registerLoginOculto">
+                        <br>
+                        <div>
+                            <label for="inputUsuarioReg">Usuario:</label>
+                        </div>
+                        <div>
+                            <input type="text" id="inputUsuarioReg" name="inputUsuarioReg" />
+                        </div>
+                        <br>
+                        <div>
+                            <label for="inputPasswdReg">Contraseña:</label>
+                        </div>
+                        <div>
+                            <input type="password" id="inputPasswdReg" />
+                        </div>
+                        <br>
+                        <div>
+                            <label for="inputPasswdRepeatReg">Repetir Contraseña:</label>
+                        </div>
+                        <div>
+                            <input type="password" id="inputPasswdRepeatReg" />
+                        </div>
+                        <br>
+                        <div>
+                            <button onclick="enviar('reg')">Enviar</button>
+                        </div>
+                    </div>
+
+                    <div id="loginDiv" class="registerLoginOculto">
+                        <br>
+                        <div>
+                            <label for="inputUsuarioLog">Usuario:</label>
+                        </div>
+                        <div>
+                            <input type="text" id="inputUsuarioLog" />
+                        </div>
+                        <br>
+                        <div>
+                            <label for="inputPasswdLog">Contraseña:</label>
+                        </div>
+                        <div>
+                            <input type="password" id="inputPasswdLog" />
+                        </div>
+                        <br>
+                        <div>
+                            <button onclick="enviar('log')">Enviar</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span id="login-span"></span>
+                    </div>
+
+                    <div>
+                        <span id="logged-user" hidden>Usuario: </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <button onclick="desplegarNav()" id="boton-desplegar" class="boton-lista"></button>
+            <ul id="navBar" class="oculto">
+                <li><a href="../index.html" id="inicio">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="#">Posts</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+    <button onclick="show()"></button>
+    <footer>
+        <p>Copyright &#169; 2022 - Elche la mejor ciudad</p>
+    </footer>
+</body>
+</html>

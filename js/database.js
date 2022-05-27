@@ -2,7 +2,7 @@
 Simple users 'database' with all register and login funcs (if page is refreshed users registered will be deleted)
 */
 
-var users = []
+var users = [] //Array of stored users
 
 var loginIsShown = false
 var registerIsShown = false
@@ -11,33 +11,29 @@ function showRegister() {
     var registerDiv = document.getElementById('registerDiv')
 
     if(registerDiv.classList.contains('registerDesplegado')) {
-        registerDiv.classList.remove('registerDesplegado')
-        registerDiv.classList.add('registerLoginOculto')
+        registerDiv.classList.replace('registerDesplegado', 'registerLoginOculto')
         registerIsShown = false
     } else {
         if(loginIsShown) {
             showLogin()
         }
         registerIsShown = true
-        registerDiv.classList.remove('registerLoginOculto')
-        registerDiv.classList.add('registerDesplegado')
+        registerDiv.classList.replace('registerLoginOculto', 'registerDesplegado')
     }
 }
 
 function showLogin() {
-    var registerDiv = document.getElementById('loginDiv')
+    var loginDiv = document.getElementById('loginDiv')
 
-    if(registerDiv.classList.contains('registerDesplegado')) {
-        registerDiv.classList.remove('registerDesplegado')
-        registerDiv.classList.add('registerLoginOculto')
+    if(loginDiv.classList.contains('registerDesplegado')) {
+        loginDiv.classList.replace('registerDesplegado', 'registerLoginOculto')
         loginIsShown = false
     } else {
         if(registerIsShown) {
             showRegister()
         }
         loginIsShown = true
-        registerDiv.classList.remove('registerLoginOculto')
-        registerDiv.classList.add('registerDesplegado')
+        loginDiv.classList.replace('registerLoginOculto', 'registerDesplegado')
     }
 }
 
@@ -45,11 +41,10 @@ function register(username, password) {
     for(var i = 0; i < users.length; i++) {
         var parsedUser = users[i].user
         if(parsedUser === username) {
-            console.log('El usuario ya se encontraba registrado')
             return writeResultOnPage(false, 'Registro')
         }
     }
-    console.log('Register correcto')
+
     users.push({user: username, password: password})
     return writeResultOnPage(true, 'Registro')
 }
@@ -59,12 +54,11 @@ function login(username, password) {
         var parsedUser = users[i].user
         var parsedPass = users[i].password
         if(parsedUser === username && parsedPass === password) {
-            console.log('Login correcto')
             //writeResultOnPage(true, 'Login')
             return loginCompleted(username)
         }
     }
-    console.log('Login incorrecto')
+
     writeResultOnPage(false, 'Login')
 }
 
@@ -169,8 +163,12 @@ function resetSpan() {
 function loginCompleted(username) {
     var loginButtons = document.getElementById('loginButtons')
     var spanLoggedUser = document.getElementById('logged-user')
+
     loginButtons.classList.remove('loginButtonsDesplegado')
     loginButtons.classList.add('loginButtonsOculto')
+    // Doesnt work for some reason
+    //loginButtons.classList.replace('loginButtonsDesplegado', 'loginButtonsOculto')
     spanLoggedUser.textContent = spanLoggedUser.textContent.concat(username)
     spanLoggedUser.removeAttribute('hidden')
+    resetSpan()
 }
