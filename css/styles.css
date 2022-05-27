@@ -3,9 +3,11 @@ ul {
     margin: 0;
 }
 
-.articulos-imagen{
+/*
+.articulos-imagen {
     max-width: 600px;
 }
+*/
 
 img{
     width: 100%;
