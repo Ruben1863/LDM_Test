@@ -20,6 +20,7 @@ function showRegister() {
         registerIsShown = true
         registerDiv.classList.replace('registerLoginOculto', 'registerDesplegado')
     }
+    showAside()
 }
 
 function showLogin() {
@@ -35,6 +36,7 @@ function showLogin() {
         loginIsShown = true
         loginDiv.classList.replace('registerLoginOculto', 'registerDesplegado')
     }
+    showAside()
 }
 
 function register(username, password) {
@@ -171,4 +173,36 @@ function loginCompleted(username) {
     spanLoggedUser.textContent = spanLoggedUser.textContent.concat(username)
     spanLoggedUser.removeAttribute('hidden')
     resetSpan()
+}
+
+function desplegarNav() {
+    var navBar = document.getElementById('navBar')
+    var boton = document.getElementById('boton-desplegar')
+
+    if(navBar.classList.contains('desplegado')) {
+        boton.classList.replace('boton-cerrar','boton-lista')
+        navBar.classList.replace('desplegado','oculto')
+        showAside()
+    } else {
+        boton.classList.replace('boton-lista','boton-cerrar')
+        navBar.classList.replace('oculto','desplegado')
+        showAside()
+    }
+}
+
+function showAside() {
+    var aside = document.getElementById('aside')
+    var navBar = document.getElementById('navBar')
+    var registerDiv = document.getElementById('registerDiv')
+    var loginDiv = document.getElementById('loginDiv')
+
+    var b1 = navBar.classList.contains('desplegado')
+    var b2 = registerDiv.classList.contains('registerDesplegado')
+    var b3 = loginDiv.classList.contains('registerDesplegado')
+
+    if(b1 || b2 || b3) {
+        return aside.classList.add('oculto')
+    } else {
+        return aside.classList.remove('oculto')
+    }
 }
