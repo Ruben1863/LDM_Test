@@ -1,0 +1,35 @@
+.form-div {
+    align-self: center;
+}
+
+.texto-form {
+    text-align: center;
+}
+
+@media screen and (min-width: 1080px) {
+    .reduced-form {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .form-div {
+        display: none;
+    }
+
+    .reduced-form {
+        align-self: center;
+        background-color: whitesmoke;
+        border: 1px solid black;
+        border-radius: 16px;
+    }
+
+    .reduced-form form div {
+        margin: 10px;
+    }
+
+    .botones-form {
+        text-align: center;
+        padding: 10px;
+    }
+}
