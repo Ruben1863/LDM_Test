@@ -190,7 +190,6 @@ article:hover {
     top: 39%;
     background-color: rgb(183, 183, 183);
     padding: 5px;
-    transition: all 0.2s linear;
 }
 
 .div-posts div {
@@ -207,7 +206,6 @@ article:hover {
     top: 39%;
     background-color: rgb(183, 183, 183);
     padding: 5px;
-    transition: all 0.2s linear;
 }
 
 .oculto-posts div {
@@ -233,7 +231,6 @@ article:hover {
     position: fixed;
     right: 0px;
     top: 39%;
-    transition: all 0.2s linear;
 }
 
 .asideReplegar {
@@ -253,9 +250,7 @@ article:hover {
     height: 32px;
     padding: 0%;
     position: fixed;
-    right: 1px; /* For smoother transition */
     top: 39%;
-    transition: all 0.2s linear;
 }
 
 .diva {
