@@ -255,14 +255,17 @@ article:hover {
 
 .diva {
     padding: 10px;
+    background-color: #04AA6D;
 }
 
 .diva a {
     text-decoration: none;
-    color: #04AA6D;
+    font-weight: bold;
+    color: whitesmoke;
 }
 
 aside div a {
     text-decoration: none;
     color: blueviolet;
+    font-weight: bold;
 }
