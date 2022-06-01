@@ -8,10 +8,13 @@ function loadPosts() {
         if(postsDiv.classList.contains('oculto-posts')) {
             postsDiv.classList.replace('oculto-posts','div-posts')
             botonAside.classList.replace('asideDesplegar','asideReplegar')
+            var width = postsDiv.offsetWidth
+            botonAside.style.right = width + 'px'
             return;
         } else {
             postsDiv.classList.replace('div-posts','oculto-posts')
             botonAside.classList.replace('asideReplegar','asideDesplegar')
+            botonAside.style.right = 0 + 'px'
             return;
         }
     }
@@ -25,4 +28,6 @@ function loadPosts() {
     
     postsDiv.classList.replace('oculto-posts','div-posts')
     botonAside.classList.replace('asideDesplegar','asideReplegar')
+    var width = postsDiv.offsetWidth
+    botonAside.style.right = width + 'px'
 }

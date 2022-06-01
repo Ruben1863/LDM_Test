@@ -5,6 +5,7 @@ ul {
 
 img {
     width: 100%;
+    max-height: 310px; /* Ops, hardcoded */
 }
 
 body {
@@ -179,13 +180,9 @@ article:hover {
     box-shadow: 0 16px 10px rgba(0, 0, 0, 0.2);
 }
 
-.contenedorLogin {
-    margin: 16px 32px 16px 0 !important;
-}
-
 .div-posts {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     border: 0.5px solid rgba(0, 0, 0, 0.5);
     border-bottom-left-radius: 16px;
     position: fixed;
@@ -202,11 +199,11 @@ article:hover {
 
 .oculto-posts {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     border: 0.5px solid rgba(0, 0, 0, 0.5);
     border-bottom-left-radius: 16px;
     position: fixed;
-    right: -236.775px; /* calculated */
+    right: -500px; /* idk */
     top: 39%;
     background-color: rgb(183, 183, 183);
     padding: 5px;
@@ -256,7 +253,7 @@ article:hover {
     height: 32px;
     padding: 0%;
     position: fixed;
-    right: 235px; /* Calculated */
+    right: 1px; /* For smoother transition */
     top: 39%;
     transition: all 0.2s linear;
 }

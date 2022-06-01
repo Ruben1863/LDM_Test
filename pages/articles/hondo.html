@@ -1,8 +1,5 @@
 <!-- Todo: Carrusel -->
 <!-- document.getElementById('id1').style.color = 'red' para cambiar stilos sin cambiar clases -->
-
-<!-- Todo: Cuando se despliega o el register/login o el navBar que se deshabilite el aside -->
-<!-- con la clase oculto -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,18 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elche | La mejor ciudad</title>
-    <link rel="stylesheet" href="css/styles.css" media="(min-width: 1080px)" type="text/css"/>
-    <link rel="stylesheet" href="css/small-styles.css" media="(max-width: 1080px)" type="text/css"/>
-    <link rel="stylesheet" href="css/register.css" type="text/css"/>
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    <script src="js/database.js"></script>
-    <script src="js/import-posts.js"></script>
+    <link rel="stylesheet" href="../../css/styles.css" media="(min-width: 1080px)" type="text/css"/>
+    <link rel="stylesheet" href="../../css/small-styles.css" media="(max-width: 1080px)" type="text/css"/>
+    <link rel="stylesheet" href="../../css/register.css" type="text/css"/>
+    <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico">
+    <script src="../../js/database.js"></script>
 </head>
 <body>
     <div class="header-fijo">
         <header>
             <div>
-                <img src="imgs/logo.svg" width="75" height="50" alt="logo" class="logo">
+                <img src="../../imgs/logo.svg" width="75" height="50" alt="logo" class="logo">
             </div>
             <div><p class="titulo">Elche</p></div>
             <div>
@@ -93,73 +89,14 @@
         <nav>
             <button onclick="desplegarNav()" id="boton-desplegar" class="boton-lista"></button>
             <ul id="navBar" class="oculto">
-                <li><a href="#" id="inicio" title="Inicio">Inicio</a></li>
-                <li><a href="pages/contacto.html" title="Contacto">Contacto</a></li>
-                <li><a href="pages/about.html" title="Sobre Nosotros">Sobre Nosotros</a></li>
+                <li><a href="../../index.html" title="Inicio">Inicio</a></li>
+                <li><a href="../contacto.html" title="Contacto">Contacto</a></li>
+                <li><a href="../about.html" title="Sobre Nosotros">Sobre Nosotros</a></li>
             </ul>
         </nav>
     </div>
 
-    <section id="posts">
-        <article>
-            <div class="articulos-imagen">
-                <img alt="art1" src="imgs/alcudia.jpg">
-            </div>
-            <div class="diva">
-                <a href="pages/articles/alcudia.html">Alcudia</a>
-            </div>
-        </article>
-
-        <article>
-            <div class="articulos-imagen">
-                <img alt="art1" src="imgs/el-hondo.jpg">
-            </div>
-            <div class="diva">
-                <a href="pages/articles/hondo.html">El Hondo</a>
-            </div>
-        </article>
-
-        <article>
-            <div class="articulos-imagen">
-                <img alt="art1" src="imgs/palmeral.jpg">
-            </div>
-            <div class="diva">
-                <a href="pages/articles/palmeral.html">El Palmeral</a>
-            </div>
-        </article>
-
-        <article>
-            <div class="articulos-imagen">
-                <img alt="art1" src="imgs/parque2.jpg">
-            </div>
-            <div class="diva">
-                <a href="pages/articles/parque-municipal.html">Parque Municipal</a>
-            </div>
-        </article>
-
-        <article>
-            <div class="articulos-imagen">
-                <img alt="art1" src="imgs/mahe.jpg">
-            </div>
-            <div class="diva">
-                <a href="pages/articles/mahe.html">Mahe</a>
-            </div>
-        </article>
-
-        <article>
-            <div class="articulos-imagen">
-                <img alt="art1" src="imgs/palmera-gordaca.jpg">
-            </div>
-            <div class="diva">
-                <a href="pages/articles/palmera-imperial.html">Palmera Imperial</a>
-            </div>
-        </article>
-        
-        <aside id="aside">
-            <button onclick="loadPosts()" class="asideDesplegar" id="boton-aside"></button>
-            <div class="oculto-posts" id="div-posts"></div>
-        </aside>
-    </section>
+    <!-- contenido -->
 
     <footer>
         <p>Copyright &#169; 2022 - Elche la mejor ciudad</p>
