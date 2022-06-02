@@ -5,7 +5,7 @@ main {
 }
 
 main div {
-    margin: 10px;
+    margin: 0 10px 0 10px;
 }
 
 main div img {
@@ -14,4 +14,8 @@ main div img {
 
 h1 {
     margin-left: 10px;
+}
+
+p {
+    margin: 0;
 }
