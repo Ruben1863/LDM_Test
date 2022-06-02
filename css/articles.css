@@ -1,0 +1,17 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: "img", "p";
+}
+
+main div {
+    margin: 10px;
+}
+
+main div img {
+    object-fit: cover;
+}
+
+h1 {
+    margin-left: 10px;
+}
