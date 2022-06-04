@@ -105,19 +105,19 @@
             <table class="tabla-contacto">
               <tr>
                 <td>
-                  <label>Nombre: </label>
-                  <input type="text" />
+                  <label for="nombre" class="required">Nombre: </label>
+                  <input type="text" id="nombre" required />
                 </td>
                 <td>
-                  <label>Apellidos: </label>
-                  <input type="text" />
+                  <label for="apellidos" class="required">Apellidos: </label>
+                  <input type="text" id="apellidos" required />
                 </td>
               </tr>
   
               <tr>
                 <td colspan="2">
-                  <label>Email: </label>
-                  <input type="email" />
+                  <label for="email" class="required">Email: </label>
+                  <input type="email" id="email" required pattern="\w+\@\w+\.\w{1-4}" />
                 </td>
               </tr>
   
@@ -139,11 +139,11 @@
                 </td>
                 <td>
                   <div>
-                    <label>Componentes </label>
+                    <label>Informacion </label>
                     <input type="checkbox" name="Aficiones" value="Deporte" />
                   </div>
                   <div>
-                    <label>Ordenadores portatiles </label>
+                    <label>Sugerencias </label>
                     <input type="checkbox" name="Aficiones" value="Lectura" />
                   </div>
                   <div>
@@ -187,11 +187,10 @@
   
               <tr>
                 <td>
-                  <input type="reset" value="Resetear" name="Resetear" class="boton-terciario" />
+                  <input type="reset" value="Resetear" name="Resetear"/>
                 </td>
                 <td>
-                  <button type="submit" value="Enviar" class="boton-primario"
-                    onclick="alert('Formulario enviado correctamente! Espere nuestro mensaje');">Enviar</button>
+                  <button type="submit" value="Enviar">Enviar</button>
                 </td>
               </tr>
             </table>
@@ -200,31 +199,36 @@
       </div>
 
       <div class="reduced-form">
+        <div class="msg-form">
+          <p>Se le esta mostrando un formulario de contacto reducido para dispositivos moviles. 
+            En caso de que desee describir el motivo de su contacto para obtener una asistencia personalizada desde el primer momento,
+             use algun dispositivo de escritorio o de pantalla más grande. Disculpe por las molestia.</p>
+        </div>
         <form>  
           <div>
             <div>
-              <label for="nombre">Nombre:</label>
+              <label for="nombre2" class="required">Nombre:</label>
             </div>
             <div>
-              <input type="text" id="nombre" />
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <label for="apellidos">Apellidos:</label>
-            </div>
-            <div>
-              <input type="text" id="apellidos" />
+              <input type="text" id="nombre2" required/>
             </div>
           </div>
 
           <div>
             <div>
-              <label for="correo">Correo:</label>
+              <label for="apellidos2" class="required">Apellidos:</label>
             </div>
             <div>
-              <input type="email" id="correo" />
+              <input type="text" id="apellidos2" required/>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label for="correo" class="required">Correo:</label>
+            </div>
+            <div>
+              <input type="email" id="correo" required pattern="\w+\@\w+\.\w{1-4}"/>
             </div>
           </div>
 
